@@ -29,7 +29,7 @@ tar -cvpz $output --exclude=/proc \
 --exclude=/mnt \
 --exclude=/dev \
 --exclude=/sys \
---exclude=/run $input 2> /dev/null | split -d -b 500m - $output
+--exclude=/run $input | split -d -b 500m - $output
 
 src_files=$( total_files $input )
 src_directories=$( total_directories $input )
