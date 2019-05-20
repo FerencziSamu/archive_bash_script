@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# This bash script is used to backup a user's home directory to /tmp/.
+# Try to create backup folder if it does not exists
+sudo mkdir -p /backup
 
+# This bash script is used to backup a user's home directory to /tmp/.
 user=$(whoami)
 input=/
-output=/media/$user/pendrive/backup.tar.gz
+output=/backup 
 
 # The function total_files reports a total number of files for a given directory.
 function total_files {
@@ -25,6 +27,7 @@ function total_archived_files {
 }
 
 tar -cvpz $output --exclude=/proc \
+--exclude=/backup \
 --exclude=/media \
 --exclude=/mnt \
 --exclude=/dev \
