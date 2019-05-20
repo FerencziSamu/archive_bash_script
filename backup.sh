@@ -4,7 +4,7 @@
 
 user=$(whoami)
 input=/
-output=/media/$user/pendrive/backup.tar.gz
+output=/backup/backup_base.tar.gz
 
 # The function total_files reports a total number of files for a given directory.
 function total_files {
@@ -24,12 +24,7 @@ function total_archived_files {
        tar -tzf $1 | grep -v /$ | wc -l
 }
 
-tar -cvpz $output --exclude=/proc \
---exclude=/media \
---exclude=/mnt \
---exclude=/dev \
---exclude=/sys \
---exclude=/run $input | split -d -b 500m - $output
+tar -cvpzf $output --exclude=/backup --one-file-system $input 
 
 src_files=$( total_files $input )
 src_directories=$( total_directories $input )
@@ -47,5 +42,5 @@ if [ $src_files -eq $arch_files ]; then
        echo "Details about the output backup file:"
        ls -l $output
 else
-       echo "Backup of $input is done!"
+       echo "Backup of $input is failed!"
 fi
