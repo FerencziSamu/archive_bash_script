@@ -1,0 +1,8 @@
+tar: Removing leading `/' from member names
+tar: /proc/: file is on a different filesystem; not dumped
+tar: /sys/: file is on a different filesystem; not dumped
+tar: /tmp/.X11-unix/X0: socket ignored
+tar: /tmp/ssh-G1arYfffgbhF/agent.913: socket ignored
+tar: /tmp/snap.chromium_JLJbET/tmp/.org.chromium.Chromium.GCLJar/SingletonSocket: socket ignored
+tar: /tmp/.ICE-unix/913: socket ignored
+tar: /run/: file is on a different filesystem; not dumped
