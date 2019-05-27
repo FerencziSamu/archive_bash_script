@@ -24,7 +24,13 @@ function total_archived_files {
        tar -tzf $1 | grep -v /$ | wc -l
 }
 
-tar -cvpzf $output --exclude=/backup --exclude="swapfile" --exclude=/proc/* --one-file-system $input > /backup/tar_stdout.log 2> /backup/tar_stderr.log
+echo "Start backup script, show only errors:" 
+
+tar -cvpzf $output --exclude=/backup --exclude="swapfile" \
+--exclude=/proc/* --one-file-system $input \
+3>&1 1>/backup/backup_stdout.log 2>&3- | tee -a /backup/backup_stderr.log
+# > >(tee stdout.logfile) 2> >(tee stderr.logfile >&2) 
+#|& tee /backup/backup.log 
 
 
 # To check the result and save it into a txt 
@@ -34,15 +40,15 @@ src_directories=$( total_directories $input )
 arch_files=$( total_archived_files $output )
 arch_directories=$( total_archived_directories $output )
 
-echo "Files to be included: $src_files" >> result.txt
-echo "Directories to be included: $src_directories" >> result.txt 
-echo "Files archived: $arch_files" >> result.txt
-echo "Directories archived: $arch_directories" >> result.txt
+echo "Files to be included: $src_files" >> /backup/backup_result.txt
+echo "Directories to be included: $src_directories" >> /backup/backup_result.txt 
+echo "Files archived: $arch_files" >> /backup/backup_result.txt
+echo "Directories archived: $arch_directories" >> /backup/backup_result.txt
 
 if [ $src_files -eq $arch_files ]; then
-       echo "Backup of $input completed!" >> result.txt
-       echo "Details about the output backup file:" >> result.txt
+       echo "Backup of $input completed!" >> /backup/backup_result.txt
+       echo "Details about the output backup file:" >> /backup/backup_result.txt
        ls -l $output
 else
-       echo "Backup of $input is failed!" >> result.txt
+       echo "Backup of $input is failed!" >> /backup/backup_result.txt
 fi
