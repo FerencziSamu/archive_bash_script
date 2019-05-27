@@ -3,7 +3,8 @@
 # This bash script is used to backup a user's home directory to /tmp/.
 
 user=$(whoami)
-input=/
+# / backup whole sytem 
+input=/ 
 output=/backup/backup_base.tar.gz
 
 # The function total_files reports a total number of files for a given directory.
@@ -26,8 +27,9 @@ function total_archived_files {
 
 echo "Start backup script, show only errors:" 
 
-tar -cvpzf $output --exclude=/backup --exclude="swapfile" \
---exclude=/proc/* --one-file-system $input \
+# dev, proc, sys should not be backed up! --one-file-system creates that 
+sudo tar -cvpzf $output --exclude=/backup --exclude="swapfile" \
+--exclude=/home/origin/Documentsarchive_bash_script/ --one-file-system $input \
 3>&1 1>/backup/backup_stdout.log 2>&3- | tee -a /backup/backup_stderr.log
 # > >(tee stdout.logfile) 2> >(tee stderr.logfile >&2) 
 #|& tee /backup/backup.log 
