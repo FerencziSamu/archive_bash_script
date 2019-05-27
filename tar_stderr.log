@@ -6,3 +6,31 @@ tar: /tmp/ssh-G1arYfffgbhF/agent.913: socket ignored
 tar: /tmp/snap.chromium_JLJbET/tmp/.org.chromium.Chromium.GCLJar/SingletonSocket: socket ignored
 tar: /tmp/.ICE-unix/913: socket ignored
 tar: /run/: file is on a different filesystem; not dumped
+tar: Removing leading `/' from hard link targets
+tar: /snap/chromium-ffmpeg/13/: file is on a different filesystem; not dumped
+tar: /snap/gnome-logs/61/: file is on a different filesystem; not dumped
+tar: /snap/gnome-logs/45/: file is on a different filesystem; not dumped
+tar: /snap/sublime-text/58/: file is on a different filesystem; not dumped
+tar: /snap/gnome-3-28-1804/40/: file is on a different filesystem; not dumped
+tar: /snap/gnome-3-26-1604/74/: file is on a different filesystem; not dumped
+tar: /snap/gnome-3-26-1604/82/: file is on a different filesystem; not dumped
+tar: /snap/odrive-unofficial/2/: file is on a different filesystem; not dumped
+tar: /snap/gnome-calculator/406/: file is on a different filesystem; not dumped
+tar: /snap/gnome-calculator/260/: file is on a different filesystem; not dumped
+tar: /snap/core18/941/: file is on a different filesystem; not dumped
+tar: /snap/core/6818/: file is on a different filesystem; not dumped
+tar: /snap/core/6350/: file is on a different filesystem; not dumped
+tar: /snap/opera/37/: file is on a different filesystem; not dumped
+tar: /snap/gnome-system-monitor/57/: file is on a different filesystem; not dumped
+tar: /snap/gnome-system-monitor/81/: file is on a different filesystem; not dumped
+tar: /snap/gnome-characters/139/: file is on a different filesystem; not dumped
+tar: /snap/gnome-characters/258/: file is on a different filesystem; not dumped
+tar: /snap/chromium/721/: file is on a different filesystem; not dumped
+tar: /snap/gtk-common-themes/1198/: file is on a different filesystem; not dumped
+tar: /snap/gtk-common-themes/818/: file is on a different filesystem; not dumped
+tar: /dev/: file is on a different filesystem; not dumped
+tar: /home/origin/snap/opera/37/.config/opera/oauc_pipe: socket ignored
+tar: /home/origin/snap/opera/37/.config/opera/oauc_pipe_r: socket ignored
+tar: /home/origin/snap/chromium/721/.config/chromium/Default/Local Extension Settings/eiimnmioipafcokbfikbljfdeojpcgbh/000003.log: file changed as we read it
+tar: /home/origin/snap/chromium/721/.config/chromium/Default: file changed as we read it
+tar: /home/origin/Documents/archive_bash_script/tar_stdout.log: file changed as we read it
