@@ -8,7 +8,7 @@
  
 2. Run restore.sh  
   a, Open a terminal and navigate to the folder  
-  b, "hmod +x restore.sh"  
+  b, "chmod +x restore.sh"  
   c, run the script by ".restore.sh"  
-  d, restart your compute  
+  d, restart your computer  
   e, check route: "/backup/" for logs  
