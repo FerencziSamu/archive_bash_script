@@ -2,7 +2,7 @@
 
 user=ubuntupaszti
 
-sudo tar -xvpzf /home/$user/backup/backup.tar.gz -C /
+sudo tar -xvpzf /home/$user/backup.tar.gz -C /
 
 echo "Restore is complete!"
 
