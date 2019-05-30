@@ -1,7 +1,7 @@
 # Welcome!
 
 This is an SSH-Backup script. 
-You can create a backup for your system to another machine if the two machine is connected to each other.
+You can create a backup for your system to another machine if the two machine is connected to each other via SSH.
 
 
 # Usage:
