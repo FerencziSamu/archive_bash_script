@@ -1,3 +1,6 @@
 #!/bin/bash
+user=$(whoami)
 
-cat *tar.gz* | tar -xvpzf - -C /
+sudo tar -xvpzf /home/ubuntupaszti/backup/backup.tar.gz -C /
+
+
