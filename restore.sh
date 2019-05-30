@@ -1,6 +1,9 @@
 #!/bin/bash
-user=$(whoami)
 
-sudo tar -xvpzf /home/ubuntupaszti/backup/backup.tar.gz -C /
+user=ubuntupaszti
+
+sudo tar -xvpzf /home/$user/backup/backup.tar.gz -C /
+
+echo "Restore is complete!"
 
 

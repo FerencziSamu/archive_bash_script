@@ -1,6 +1,6 @@
 #!/bin/bash
 
-user=$(whoami)
+user=ubuntupaszti
 input=/
 output=/home/$user/backup/backup.tar.gz
 
