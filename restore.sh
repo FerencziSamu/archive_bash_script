@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo tar -xvpzf /backup/backup_base.tar.gz -C /
+cat *tar.gz* | tar -xvpzf - -C /
