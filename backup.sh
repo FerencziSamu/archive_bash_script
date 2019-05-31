@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# This bash script is used to backup a user's home directory to /tmp/.
-
 user=$(whoami)
 input=/
+<<<<<<< HEAD
 output=/backup/backup_base.tar.gz
 
 # The function total_files reports a total number of files for a given directory.
@@ -25,18 +24,17 @@ function total_archived_files {
 }
 
 tar -cvpzf $output --exclude=/backup --one-file-system $input 
+=======
+output=/home/$user/backup/backup.tar.gz
 
-src_files=$( total_files $input )
-src_directories=$( total_directories $input )
+tar -cvpzf $output --exclude=home/$user/backup --one-file-system $input
+>>>>>>> 6193ba03f91877921cd7178c93aa3c56698227bf
 
-arch_files=$( total_archived_files $output )
-arch_directories=$( total_archived_directories $output )
+echo "Backup of $input is complete!"
 
-echo "Files to be included: $src_files"
-echo "Directories to be included: $src_directories"
-echo "Files archived: $arch_files"
-echo "Directories archived: $arch_directories"
 
+
+<<<<<<< HEAD
 if [ $src_files -eq $arch_files ]; then
        echo "Backup of $input completed!"
        echo "Details about the output backup file:"
@@ -44,3 +42,5 @@ if [ $src_files -eq $arch_files ]; then
 else
        echo "Backup of $input is failed!"
 fi
+=======
+>>>>>>> 6193ba03f91877921cd7178c93aa3c56698227bf
